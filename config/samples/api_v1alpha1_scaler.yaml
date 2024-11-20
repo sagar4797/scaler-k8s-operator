@@ -1,0 +1,14 @@
+apiVersion: api.sagarpatil.online/v1alpha1
+kind: Scaler
+metadata:
+  labels:
+    app.kubernetes.io/name: scaler-operator
+    app.kubernetes.io/managed-by: kustomize
+  name: scaler-sample
+spec:
+  start: 5 #AM UTC
+  end: 10 #AM UTC
+  replicas: 5
+  deployments:
+    - name: nginx
+      namespace: default
